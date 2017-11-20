@@ -35,12 +35,13 @@ public class MyPanelClass extends JPanel {
                         g.drawRect(x1 + 4 , y1 + 4, width -7, height -7);
                         */
                         
-                        //lines
-                        g.setColor(Color.WHITE);
+                       /*  //lines
+                        g.setColor(Color.BLACK);
                         g.drawLine(x1, y1, x2, y2);
                         
-                        g.setColor(Color.ORANGE);
-                        g.drawLine(x2, y1, x1, y2);
+                        g.setColor(Color.BLACK);
+                        g.drawLine(x2/2, y1, x1, y2);
+                        */
                         
                         //Oval
                         /*
@@ -62,21 +63,43 @@ public class MyPanelClass extends JPanel {
                         g.fillPolygon(p);
                         */
                         
-                        //Plugon 2
+                   
                         
-                        Polygon p2 = new Polygon();
-                        p2.addPoint(x1 + 25, y1 + 73);
-                        p2.addPoint(x1 + 41, y1 + 73);
-                        p2.addPoint(x1 + 47, y1 + 58);
-                        p2.addPoint(x1 + 53, y1 + 73);
-                        p2.addPoint(x1 + 69, y1 + 73);
-                        p2.addPoint(x1 + 56, y1 + 83);
-                        p2.addPoint(x1 + 61, y1 + 98);
-                        p2.addPoint(x1 + 47, y1 + 88);
-                        p2.addPoint(x1 + 34, y1 + 98);
-                        p2.addPoint(x1 + 38, y1 + 83);
+                        
+                        // flag
+                        
+                        //rectangles
                         g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillRect(x1, y1  + 70, width, height - 350);
                         
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1, y1  + 290, width, height - 350);
+                        
+                        //triangle
+                        
+                        Polygon p3 = new Polygon();
+                        p3.addPoint(x1, y1);
+                        p3.addPoint(width - 500, height - 250);
+                        p3.addPoint(x1, y1 + height);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(p3);
+                        
+                        //star
+                     
+                       
+                        
+                        Polygon p5 = new Polygon();
+                        p5.addPoint(width - 715, height - 287);
+                        p5.addPoint(width - 699, height - 287);
+                        p5.addPoint(width - 693, height - 302);
+                        p5.addPoint(width - 687, height - 287);
+                        p5.addPoint(width - 671, height - 287);
+                        p5.addPoint(width - 684, height - 277);
+                        p5.addPoint(width - 679, height - 262);
+                        p5.addPoint(width - 693, height - 272);
+                        p5.addPoint(width - 706, height - 262);
+                        p5.addPoint(width - 702, height - 277);
+                        g.setColor(Color.WHITE);
+                        g.fillPolygon(p5);
             }
 }
